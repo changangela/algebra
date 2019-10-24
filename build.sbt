@@ -253,5 +253,5 @@ credentials += Credentials(
 
 lazy val dottySettings = List(
   libraryDependencies := libraryDependencies.value.map(_.withDottyCompat(scalaVersion.value)),
-  scalacOptions := List("-language:Scala2", "-Yexplicit-nulls")
+  scalacOptions := List("-language:Scala2", "-Yexplicit-nulls", "-Yjava-interop-dont-nullify-outermost")
 )
